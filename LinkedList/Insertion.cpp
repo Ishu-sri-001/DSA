@@ -1,4 +1,3 @@
-// Online C++ compiler to run C++ program online
 #include <iostream>
 using namespace std;
 struct Node 
@@ -57,12 +56,21 @@ void insertion(Node*& head,int pos,int value)
         head=tmp;
         return;
     }
-    for (int i=0;i<pos-1;i++)
+    Node* cur=head;
+    for (int i=0;i<pos-1 && cur!=NULL;i++)
+    {
+        cur=cur->next;
+    }
+    tmp->next=cur->next;
+    cur->next=tmp;
+}
+
+void deletion(Node*& head,int posn)
+{
+    if(posn==0)
     {
         head=head->next;
     }
-    tmp->next=head->next;
-    head->next=tmp;
 }
 int main() {
     int n;
