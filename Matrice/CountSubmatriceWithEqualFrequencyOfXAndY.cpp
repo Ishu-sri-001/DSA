@@ -1,4 +1,5 @@
 // https://leetcode.com/problems/count-submatrices-with-equal-frequency-of-x-and-y/description/
+//  764/770 test cases passed
 
 class Solution {
 public:
